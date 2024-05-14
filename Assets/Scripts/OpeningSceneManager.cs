@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class OpeningSceneManager : MonoBehaviour
 {
-    private InputField InputName;
+    public InputField InputName;
     
     public Button JoinButton;       // "Join" 버튼
     public Button SelectCharButton; // 캐릭터 선택 버튼
@@ -24,7 +24,6 @@ public class OpeningSceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -34,17 +33,19 @@ public class OpeningSceneManager : MonoBehaviour
         SelectCharButton.onClick.AddListener(ShowSelectMenu);
         PenguinButton.onClick.AddListener(SelectPenguin);
         GreenButton.onClick.AddListener(SelectGreen);
+
     }
 
-    public string SaveName()
-    {
-        return InputName.text;
-    }
-
-    // 이름 입력 후 다음 씬 이동
+    //  "Join" 누른 후 다음 씬 이동
     public void NextScene()
     {
-        SceneManager.LoadScene("MainScene");
+        if (InputName.text.Length >= 2)
+        {
+            PlayerPrefs.SetString("Name", InputName.text);
+            SceneManager.LoadScene("MainScene");
+        }
+        else
+            Debug.Log("이름의 길이는 2 ~ 10 사이입니다.");
     }
 
     // 캐릭터 창 클릭 후 캐릭터 선택 창 활성화

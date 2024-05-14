@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 91088091}
   - component: {fileID: 91088090}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: InputName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1462,6 +1462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 247228bd7a409924a9f8393b9069e475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InputName: {fileID: 1112274559}
   JoinButton: {fileID: 2069723450}
   SelectCharButton: {fileID: 616329797}
   PenguinButton: {fileID: 433461065}
@@ -1469,7 +1470,6 @@ MonoBehaviour:
   SpritePenguin: {fileID: 21300000, guid: 901639f1dddd7b04aa3c943786d274d5, type: 3}
   SpriteGreen: {fileID: -1226759218242661292, guid: b03ab7313f66c8d4e8939dc12542e980, type: 3}
   characterRenderer: {fileID: 1510088270}
-  CharacterSprite: {fileID: 0}
   CharacterBox: {fileID: 1510088268}
   SelectBox: {fileID: 1364060775}
   NameBox: {fileID: 1680918190}
@@ -1683,6 +1683,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1380880880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1380880881}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1380880881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380880880}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6940539, y: -0.5385408, z: -0.16911936}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1419083437
 GameObject:
   m_ObjectHideFlags: 0
@@ -2585,3 +2616,4 @@ SceneRoots:
   - {fileID: 1244338551}
   - {fileID: 75051392}
   - {fileID: 1364060776}
+  - {fileID: 1380880881}
