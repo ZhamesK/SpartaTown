@@ -8,6 +8,13 @@ using TMPro;
 
 public class MainSceneManager : MonoBehaviour
 {
+    public InputField InputChangedName;
+
+    public Button ChangeNameUIBttn;
+    public Button ConfirmBttn;
+
+    public GameObject ChangeNameUI;
+
     public Text NameTxt;
     public TextMeshProUGUI TimeTxt;
 
@@ -21,6 +28,8 @@ public class MainSceneManager : MonoBehaviour
     void Update()
     {
         TimeTxt.text = GetCurrentTime();
+        ConfirmBttn.onClick.AddListener(ChangeName);
+        ChangeNameUIBttn.onClick.AddListener(CallChangeNameUI);
     }
 
     public void LoadName()
@@ -40,5 +49,16 @@ public class MainSceneManager : MonoBehaviour
     public string GetCurrentTime()
     {
         return DateTime.Now.ToString("HH:mm:ss");
+    }
+
+    public void CallChangeNameUI()
+    {
+        ChangeNameUI.SetActive(true);
+    }
+
+    public void ChangeName()
+    {
+        NameTxt.text = InputChangedName.text;
+        ChangeNameUI.SetActive(false);
     }
 }
